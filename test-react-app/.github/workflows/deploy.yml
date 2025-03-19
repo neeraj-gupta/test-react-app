@@ -17,7 +17,10 @@ jobs:
       run: npm install
       working-directory: test-react-app
 
-
+    - name: Clean Old Build
+      run: rm -rf test-react-app/build
+      working-directory: test-react-app
+    
     - name: Build React App
       run: npm run build
       working-directory: test-react-app
